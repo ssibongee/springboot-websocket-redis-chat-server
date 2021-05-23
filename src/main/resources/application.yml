@@ -8,3 +8,6 @@ spring:
     cache: false
     template-loader-path: classpath:/templates
     suffix: .ftl
+  redis:
+    host: localhost
+    port: 6379

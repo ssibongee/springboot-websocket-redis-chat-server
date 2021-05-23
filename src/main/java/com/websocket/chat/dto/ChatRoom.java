@@ -6,6 +6,7 @@ import lombok.Getter;
 import org.springframework.beans.propertyeditors.UUIDEditor;
 import org.springframework.web.socket.WebSocketSession;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -13,7 +14,9 @@ import java.util.UUID;
 import static com.websocket.chat.dto.ChatMessage.MessageType.*;
 
 @Getter
-public class ChatRoom {
+public class ChatRoom implements Serializable {
+
+    private static final long serialVersionUID = 6494678977089006639L;
 
     private String roomId;
     private String name;
